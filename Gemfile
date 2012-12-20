@@ -35,3 +35,21 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "thin", ">= 1.5.0"
+gem "mongoid", ">= 3.0.14"
+gem "rspec-rails", ">= 2.11.4", :group => [:development, :test]
+gem "capybara", ">= 2.0.1", :group => :test
+gem "database_cleaner", ">= 0.9.1", :group => :test
+gem "mongoid-rspec", ">= 1.5.5", :group => :test
+gem "email_spec", ">= 1.4.0", :group => :test
+gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
+gem "less-rails", ">= 2.2.6", :group => :assets
+gem "twitter-bootstrap-rails", ">= 2.1.8", :group => :assets
+gem "libv8", ">= 3.11.8"
+gem "therubyracer", ">= 0.11.0", :group => :assets, :platform => :ruby, :require => "v8"
+gem "omniauth", ">= 1.1.1"
+gem "omniauth-google-oauth2"
+gem "cancan", ">= 1.6.8"
+gem "rolify", ">= 3.2.0"
+gem "simple_form", ">= 2.0.4"
