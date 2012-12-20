@@ -1,0 +1,724 @@
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace$ vi createNewRailsApp.sh 
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace$ if[ -e leadman ]; then echo 000
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace$ sh createNewRailsApp.sh 
+Creating  rails app with with Test::Unit (enable rspec) and Active Record (enable Mongodb)
+Options should be given after the application name. For details run: rails --help
+Successfully created 
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace$ ls
+createNewRailsApp.sh  leadman  leadman-bak.tar.gz  new-leadman-bak.tar.gz  old-leadman  old-leadman2
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace$ vi createNewRailsApp.sh 
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace$ sh createNewRailsApp.sh leadman
+Creating leadman rails app with with Test::Unit (enable rspec) and Active Record (enable Mongodb)
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/images/rails.png
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/mailers
+      create  app/models
+      create  app/views/layouts/application.html.erb
+      create  app/mailers/.gitkeep
+      create  app/models/.gitkeep
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/secret_token.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  db
+      create  db/seeds.rb
+      create  doc
+      create  doc/README_FOR_APP
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.gitkeep
+      create  lib/assets
+      create  lib/assets/.gitkeep
+      create  log
+      create  log/.gitkeep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/index.html
+      create  public/robots.txt
+      create  script
+      create  script/rails
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.gitkeep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.gitkeep
+      create  vendor/plugins
+      create  vendor/plugins/.gitkeep
+       apply  https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+ initializer    generators.rb
+    composer  WOOT! The recipes you've selected are known to work together.
+    composer  Using rails_apps_composer recipes to generate an application.
+      insert    config/application.rb
+      recipe  Running core recipe...
+        core  selected all core recipes
+      recipe  Running git recipe...
+         git  initialize git
+      remove    .gitignore
+      create    .gitignore
+         run    git init from "."
+Initialized empty Git repository in /home/cwilder/projects/MortgageLeadSystem/workspace/leadman/.git/
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: initial commit" from "."
+      recipe  Running railsapps recipe...
+    question  Install an example application?
+          1)  I want to build my own application
+          2)  rails-stripe-membership-saas
+          3)  rails-prelaunch-signup
+          4)  rails3-bootstrap-devise-cancan
+          5)  rails3-devise-rspec-cucumber
+          6)  rails3-mongoid-devise
+          7)  rails3-mongoid-omniauth
+          8)  rails3-subdomains
+   railsapps  Enter your selection: 1
+      recipe  Running setup recipe...
+       setup  Your operating system is linux-gnu.
+       setup  You are using Ruby version 1.9.3.
+       setup  You are using Rails version 3.2.9.
+    question  Web server for development?
+          1)  WEBrick (default)
+          2)  Thin
+          3)  Unicorn
+          4)  Puma
+       setup  Enter your selection: 2
+    question  Web server for production?
+          1)  Same as development
+          2)  Thin
+          3)  Unicorn
+          4)  Puma
+       setup  Enter your selection: 1
+    question  Database used in development?
+          1)  SQLite
+          2)  PostgreSQL
+          3)  MySQL
+          4)  MongoDB
+       setup  Enter your selection: 4
+    question  How will you connect to MongoDB?
+          1)  Mongoid
+       setup  Enter your selection: 1
+    question  Template engine?
+          1)  ERB
+          2)  Haml
+          3)  Slim (experimental)
+       setup  Enter your selection: 1
+    question  Unit testing?
+          1)  Test::Unit
+          2)  RSpec
+          3)  MiniTest
+       setup  Enter your selection: 2
+    question  Integration testing?
+          1)  None
+          2)  RSpec with Capybara
+          3)  Cucumber with Capybara
+          4)  Turnip with Capybara
+          5)  MiniTest with Capybara
+       setup  Enter your selection: 2
+    question  Fixture replacement?
+          1)  None
+          2)  Factory Girl
+          3)  Machinist
+          4)  Fabrication
+       setup  Enter your selection: 2
+    question  Front-end framework?
+          1)  None
+          2)  Twitter Bootstrap
+          3)  Zurb Foundation
+          4)  Skeleton
+          5)  Just normalize CSS for consistent styling
+       setup  Enter your selection: 2
+    question  Twitter Bootstrap version?
+          1)  Twitter Bootstrap (Less)
+          2)  Twitter Bootstrap (Sass)
+       setup  Enter your selection: 1
+    question  Add support for sending email?
+          1)  None
+          2)  Gmail
+          3)  SMTP
+          4)  SendGrid
+          5)  Mandrill
+       setup  Enter your selection: 2
+    question  Authentication?
+          1)  None
+          2)  Devise
+          3)  OmniAuth
+       setup  Enter your selection: 3
+    question  OmniAuth provider?
+          1)  Facebook
+          2)  Twitter
+          3)  GitHub
+          4)  LinkedIn
+          5)  Google-Oauth-2
+          6)  Tumblr
+       setup  Enter your selection: 5
+    question  Authorization?
+          1)  None
+          2)  CanCan with Rolify
+       setup  Enter your selection: 2
+    question  Use a form builder gem?
+          1)  None
+          2)  SimpleForm
+       setup  Enter your selection: 2
+    question  Install a starter app?
+          1)  None
+          2)  Home Page
+          3)  Home Page, User Accounts
+          4)  Home Page, User Accounts, Admin Dashboard
+       setup  Enter your selection: 4
+      create    README
+      append    README
+      recipe  Running readme recipe...
+      recipe  Running gems recipe...
+     gemfile    thin (>= 1.5.0)
+        gsub    Gemfile
+     gemfile    mongoid (>= 3.0.14)
+     gemfile    rspec-rails (>= 2.11.4)
+     gemfile    capybara (>= 2.0.1)
+     gemfile    database_cleaner (>= 0.9.1)
+     gemfile    mongoid-rspec (>= 1.5.5)
+     gemfile    email_spec (>= 1.4.0)
+     gemfile    factory_girl_rails (>= 4.1.0)
+     gemfile    less-rails (>= 2.2.6)
+     gemfile    twitter-bootstrap-rails (>= 2.1.8)
+     gemfile    libv8 (>= 3.11.8)
+     gemfile    therubyracer (>= 0.11.0)
+     gemfile    omniauth (>= 1.1.1)
+     gemfile    omniauth-google-oauth2
+     gemfile    cancan (>= 1.6.8)
+     gemfile    rolify (>= 3.2.0)
+     gemfile    simple_form (>= 2.0.4)
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: Gemfile" from "."
+      recipe  Running testing recipe...
+      recipe  Running email recipe...
+      recipe  Running models recipe...
+      recipe  Running controllers recipe...
+      recipe  Running views recipe...
+      recipe  Running routes recipe...
+      recipe  Running frontend recipe...
+      recipe  Running init recipe...
+      recipe  Running prelaunch recipe...
+      recipe  Running prelaunch recipe...
+      recipe  Running extras recipe...
+      extras  Reduce assets logger noise during development? (y/n) y
+      extras  Use application.yml file for environment variables? (y/n) y
+      extras  Improve error reporting with 'better_errors' during development? (y/n) y
+      extras  Set a robots.txt file to ban spiders? (y/n) y
+      extras  Create a project-specific rvm gemset and .rvmrc? (y/n) y
+      extras  Create a GitHub repository? (y/n) y
+      extras  recipe setting quiet_assets for reduced asset pipeline logging
+     gemfile    quiet_assets (>= 1.0.1)
+      extras  recipe creating application.yml file for environment variables
+     gemfile    figaro (>= 0.5.0)
+      extras  recipe adding better_errors gem
+     gemfile    better_errors (>= 0.2.0)
+     gemfile    binding_of_caller (>= 0.6.8)
+      extras  recipe banning spiders by modifying 'public/robots.txt'
+      extras  Add 'therubyracer' JavaScript runtime (for Linux users without node.js)? (y/n) y
+      extras  WARNING! RVM does not appear to be available.
+     gemfile    hub (>= 1.10.2)
+    composer  Installing gems. This will take a while.
+         run    bundle install --without production from "."
+Fetching gem metadata from https://rubygems.org/.........
+Fetching gem metadata from https://rubygems.org/..
+Enter your password to install the bundled RubyGems to your system: 
+Using rake (10.0.3) 
+Using i18n (0.6.1) 
+Using multi_json (1.5.0) 
+Using activesupport (3.2.9) 
+Using builder (3.0.4) 
+Using activemodel (3.2.9) 
+Using erubis (2.7.0) 
+Using journey (1.0.4) 
+Using rack (1.4.1) 
+Using rack-cache (1.2) 
+Using rack-test (0.6.2) 
+Using hike (1.2.1) 
+Using tilt (1.3.3) 
+Using sprockets (2.2.2) 
+Using actionpack (3.2.9) 
+Using mime-types (1.19) 
+Using polyglot (0.3.3) 
+Using treetop (1.4.12) 
+Using mail (2.4.4) 
+Using actionmailer (3.2.9) 
+Using arel (3.0.2) 
+Using tzinfo (0.3.35) 
+Using activerecord (3.2.9) 
+Using activeresource (3.2.9) 
+Using addressable (2.3.2) 
+Using coderay (1.0.8) 
+Using better_errors (0.3.2) 
+Using binding_of_caller (0.6.8) 
+Using bundler (1.2.3) 
+Using cancan (1.6.8) 
+Using nokogiri (1.5.6) 
+Using ffi (1.2.0) 
+Using childprocess (0.3.6) 
+Using websocket (1.0.5) 
+Using libwebsocket (0.1.7.1) 
+Using rubyzip (0.9.9) 
+Using selenium-webdriver (2.27.2) 
+Using xpath (1.0.0) 
+Using capybara (2.0.1) 
+Using coffee-script-source (1.4.0) 
+Using execjs (1.4.0) 
+Using coffee-script (2.2.0) 
+Using rack-ssl (1.3.2) 
+Using json (1.7.5) 
+Using rdoc (3.12) 
+Using thor (0.16.0) 
+Using railties (3.2.9) 
+Using coffee-rails (3.2.2) 
+Using commonjs (0.2.6) 
+Using daemons (1.1.9) 
+Using database_cleaner (0.9.1) 
+Using diff-lcs (1.1.3) 
+Using launchy (2.1.2) 
+Using email_spec (1.4.0) 
+Using eventmachine (1.0.0) 
+Using factory_girl (4.1.0) 
+Using factory_girl_rails (4.1.0) 
+Using multipart-post (1.1.5) 
+Using faraday (0.8.4) 
+Using rails (3.2.9) 
+Using figaro (0.5.0) 
+Using hashie (1.2.0) 
+Using httpauth (0.2.0) 
+Using hub (1.10.3) 
+Using jquery-rails (2.1.4) 
+Using jwt (0.1.5) 
+Using less (2.2.2) 
+Using less-rails (2.2.6) 
+Using libv8 (3.11.8.4) 
+Using moped (1.3.1) 
+Using origin (1.0.11) 
+Using mongoid (3.0.15) 
+Using rspec-core (2.12.2) 
+Using rspec-expectations (2.12.1) 
+Using rspec-mocks (2.12.0) 
+Using rspec (2.12.0) 
+Using mongoid-rspec (1.5.5) 
+Using oauth2 (0.8.0) 
+Using omniauth (1.1.1) 
+Using omniauth-oauth2 (1.1.1) 
+Using omniauth-google-oauth2 (0.1.13) 
+Using quiet_assets (1.0.1) 
+Using ref (1.0.2) 
+Using rolify (3.2.0) 
+Using rspec-rails (2.12.0) 
+Using sass (3.2.3) 
+Using sass-rails (3.2.5) 
+Using simple_form (2.0.4) 
+Using therubyracer (0.11.0) 
+Using thin (1.5.0) 
+Using twitter-bootstrap-rails (2.1.9) 
+Using uglifier (1.3.0) 
+Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+    composer  Running 'after bundler' callbacks.
+    generate    mongoid:config
+
+Mongoid config not found. Create a config file at: config/mongoid.yml
+to generate one run: rails generate mongoid:config
+
+      create  config/mongoid.yml
+      remove    config/database.yml
+        gems  Drop any existing databases named leadman? (y/n) y
+         run    bundle exec rake db:drop from "."
+/usr/local/bin/bundle:23:in `load': cannot load such file -- /usr/share/rubygems-integration/1.9.1/gems/bundler-1.1.4
+/bin/bundle (LoadError)
+        from /usr/local/bin/bundle:23:in `<main>'
+         run    bundle exec rake db:create from "."
+/usr/local/bin/bundle:23:in `load': cannot load such file -- /usr/share/rubygems-integration/1.9.1/gems/bundler-1.1.4
+/bin/bundle (LoadError)
+        from /usr/local/bin/bundle:23:in `<main>'
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: create database" from "."
+        gems  recipe installing simple_form for use with Twitter Bootstrap
+    generate    simple_form:install --bootstrap
+      create  config/initializers/simple_form.rb
+      create  config/initializers/simple_form_bootstrap.rb
+       exist  config/locales
+      create  config/locales/simple_form.en.yml
+      create  lib/templates/erb/scaffold/_form.html.erb
+===============================================================================
+
+  Be sure to have a copy of the Bootstrap stylesheet available on your
+  application, you can get it on http://twitter.github.com/bootstrap.
+
+  Inside your views, use the 'simple_form_for' with one of the Bootstrap form
+  classes, '.form-horizontal', '.form-inline', '.form-search' or
+  '.form-vertical', as the following:
+
+    = simple_form_for(@user, :html => {:class => 'form-horizontal' }) do |form|
+
+===============================================================================
+    generate    figaro:install
+      create  config/application.yml
+      append  .gitignore
+        gsub    config/application.yml
+        gsub    config/application.yml
+     prepend    config/application.yml
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: generators" from "."
+     testing  recipe running after 'bundle install'
+     testing  recipe installing RSpec
+    generate    rspec:install
+      create  .rspec
+      create  spec
+      create  spec/spec_helper.rb
+      remove    spec/spec_helper.rb
+      create    spec/spec_helper.rb
+    generate    email_spec:steps
+      create  features/step_definitions/email_steps.rb
+      insert    spec/spec_helper.rb
+      insert    spec/spec_helper.rb
+         run    rm -rf test/ from "."
+      insert    config/application.rb
+        gsub    spec/spec_helper.rb
+        gsub    spec/spec_helper.rb
+        gsub    config/application.rb
+        gsub    config/application.rb
+      create    spec/support/mongoid.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: testing framework" from "."
+       email  recipe running after 'bundle install'
+        gsub    config/environments/development.rb
+        gsub    config/environments/development.rb
+      insert    config/environments/test.rb
+        gsub    config/environments/production.rb
+      insert    config/environments/development.rb
+      insert    config/environments/production.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: set email accounts" from "."
+      models  recipe running after 'bundle install'
+      remove    config/initializers/omniauth.rb
+      create    config/initializers/omniauth.rb
+        gsub    config/initializers/omniauth.rb
+      remove    app/models/user.rb
+      create    app/models/user.rb
+    generate    cancan:ability
+      create  app/models/ability.rb
+      remove    app/models/ability.rb
+      create    app/models/ability.rb
+      insert    app/models/user.rb
+    generate    rolify:role Role User mongoid
+      create  app/models/role.rb
+      insert  app/models/user.rb
+      create  config/initializers/rolify.rb
+===============================================================================
+
+An initializer file has been created here: config/initializers/rolify.rb, you 
+can change rolify settings to match your needs. 
+Defaults values are commented out.
+
+A Role class has been been created in app/models (with the name you gave as 
+argument otherwise the default is role.rb), you can add your own business logic 
+inside.
+
+Inside your User class (or the name you gave as argument otherwise the default 
+is user.rb), rolify method has been inserted to provide rolify methods.
+
+Now, if you are able to add the resourcify method inside all models you want 
+scoped by a role.
+
+===============================================================================        gsub    app/models/user.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: models" from "."
+  controllers  recipe running after 'bundle install'
+      remove    app/controllers/application_controller.rb
+      create    app/controllers/application_controller.rb
+      insert    app/controllers/application_controller.rb
+    generate    controller
+      create  app/controllers/home_controller.rb
+       route  get "home/index"
+      invoke  erb
+      create    app/views/home
+      create    app/views/home/index.html.erb
+      invoke  rspec
+      create    spec/controllers/home_controller_spec.rb
+      invoke  helper
+      create    app/helpers/home_helper.rb
+      invoke    rspec
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/home.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/home.css.scss
+        gsub    app/controllers/home_controller.rb
+      remove    app/controllers/users_controller.rb
+      create    app/controllers/users_controller.rb
+      remove    app/controllers/sessions_controller.rb
+      create    app/controllers/sessions_controller.rb
+        gsub    app/controllers/sessions_controller.rb
+      insert    app/controllers/sessions_controller.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: controllers" from "."
+       views  recipe running after 'bundle install'
+      remove    app/views/home/index.html.erb
+      create    app/views/home/index.html.erb
+      remove    app/views/users/index.html.erb
+      create    app/views/users/index.html.erb
+      remove    app/views/users/_user.html.erb
+      create    app/views/users/_user.html.erb
+      remove    app/views/users/show.html.erb
+      create    app/views/users/show.html.erb
+      remove    app/views/users/edit.html.erb
+      create    app/views/users/edit.html.erb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: views" from "."
+      routes  recipe running after 'bundle install'
+      remove    config/routes.rb
+      create    config/routes.rb
+        gsub    config/routes.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: routes" from "."
+    frontend  recipe running after 'bundle install'
+      remove    app/views/layouts/application.html.erb
+      create    app/views/layouts/application.html.erb
+      remove    app/views/layouts/application.html.erb
+      create    app/views/layouts/application.html.erb
+      remove    app/views/layouts/_messages.html.erb
+      create    app/views/layouts/_messages.html.erb
+      remove    app/views/layouts/_messages.html.erb
+      create    app/views/layouts/_messages.html.erb
+      remove    app/views/layouts/_navigation.html.erb
+      create    app/views/layouts/_navigation.html.erb
+      remove    app/views/layouts/_navigation.html.erb
+      create    app/views/layouts/_navigation.html.erb
+        gsub    app/views/layouts/application.html.erb
+        gsub    app/views/layouts/_navigation.html.erb
+      remove    app/assets/stylesheets/application.css.scss
+      create    app/assets/stylesheets/application.css.scss
+      remove    app/assets/stylesheets/application.css.scss
+      create    app/assets/stylesheets/application.css.scss
+    generate    bootstrap:install
+      insert  app/assets/javascripts/application.js
+      create  app/assets/javascripts/bootstrap.js.coffee
+      create  app/assets/stylesheets/bootstrap_and_overrides.css.less
+        gsub  app/assets/stylesheets/application.css
+        gsub  app/assets/stylesheets/application.css
+      insert    app/assets/stylesheets/bootstrap_and_overrides.css.less
+      remove    app/assets/stylesheets/application.css
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: front-end framework" from "."
+        gsub    public/robots.txt
+        gsub    public/robots.txt
+    composer  Running 'after everything' callbacks.
+      readme  recipe running after everything
+      remove    README
+      remove    README.rdoc
+      remove    doc/README_FOR_APP
+      remove    public/humans.txt
+      create    public/humans.txt
+      remove    README
+      create    README
+      remove    README.textile
+      create    README.textile
+        gsub    README
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README
+        gsub    README
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+        gsub    README.textile
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: add README files" from "."
+     testing  recipe running after everything
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: rspec files" from "."
+# On branch master
+nothing to commit (working directory clean)
+        init  recipe running after everything
+      append    config/application.yml
+      append    config/application.yml
+      append    config/application.yml
+      append    config/application.yml
+      create    config/application.example.yml
+      append    db/seeds.rb
+      append    db/seeds.rb
+        init  dropping database, creating indexes and seeding the database
+         run    bundle exec rake db:drop from "."
+/usr/local/bin/bundle:23:in `load': cannot load such file -- /usr/share/rubygems-integration/1.9.1/gems/bundler-1.1.4
+/bin/bundle (LoadError)
+        from /usr/local/bin/bundle:23:in `<main>'
+         run    bundle exec rake db:mongoid:create_indexes from "."
+/usr/local/bin/bundle:23:in `load': cannot load such file -- /usr/share/rubygems-integration/1.9.1/gems/bundler-1.1.4
+/bin/bundle (LoadError)
+        from /usr/local/bin/bundle:23:in `<main>'
+         run    bundle exec rake db:seed from "."
+/usr/local/bin/bundle:23:in `load': cannot load such file -- /usr/share/rubygems-integration/1.9.1/gems/bundler-1.1.4
+/bin/bundle (LoadError)
+        from /usr/local/bin/bundle:23:in `<main>'
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: set up database" from "."
+      extras  recipe removing unnecessary files and whitespace
+      remove    public/index.html
+      remove    app/assets/images/rails.png
+        gsub    Gemfile
+        gsub    Gemfile
+        gsub    config/routes.rb
+        gsub    config/routes.rb
+         run    git add -A from "."
+         run    git commit -qm "rails_apps_composer: extras" from "."
+      extras  recipe creating GitHub repository
+         run    hub create leadman from "."
+github.com username: cwilder23
+github.com password for cwilder23 (never stored): 
+Updating origin
+The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,207.97.227.239' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: The remote end hung up unexpectedly
+error: Could not fetch origin
+         run    hub push -u origin master from "."
+Permission denied (publickey).
+fatal: The remote end hung up unexpectedly
+    composer  WOOT! The recipes you've selected are known to work together.
+    composer  If they don't, open an issue for rails_apps_composer on GitHub.
+    composer  WARNING! The preferences you've selected might not work together.
+    composer  Help us out by reporting whether this combination works or fails.
+    composer  Please open an issue for rails_apps_composer on GitHub.
+    composer  Your new application will contain diagnostics in its README file.
+    composer  Finished running the rails_apps_composer app template.
+    composer  Your new Rails app is ready. Time to run 'bundle install'.
+         run  bundle install
+/usr/bin/ruby1.9.1: No such file or directory -- /usr/share/rubygems-integration/1.9.1/gems/bundler-1.1.4/bin/bundle 
+(LoadError)
+Successfully created leadman
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace$ bundle install
+Could not locate Gemfile
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace$ cd leadman/
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace/leadman$ bundle install
+Using rake (10.0.3) 
+Using i18n (0.6.1) 
+Using multi_json (1.5.0) 
+Using activesupport (3.2.9) 
+Using builder (3.0.4) 
+Using activemodel (3.2.9) 
+Using erubis (2.7.0) 
+Using journey (1.0.4) 
+Using rack (1.4.1) 
+Using rack-cache (1.2) 
+Using rack-test (0.6.2) 
+Using hike (1.2.1) 
+Using tilt (1.3.3) 
+Using sprockets (2.2.2) 
+Using actionpack (3.2.9) 
+Using mime-types (1.19) 
+Using polyglot (0.3.3) 
+Using treetop (1.4.12) 
+Using mail (2.4.4) 
+Using actionmailer (3.2.9) 
+Using arel (3.0.2) 
+Using tzinfo (0.3.35) 
+Using activerecord (3.2.9) 
+Using activeresource (3.2.9) 
+Using addressable (2.3.2) 
+Using coderay (1.0.8) 
+Using better_errors (0.3.2) 
+Using binding_of_caller (0.6.8) 
+Using cancan (1.6.8) 
+Using nokogiri (1.5.6) 
+Using ffi (1.2.0) 
+Using childprocess (0.3.6) 
+Using websocket (1.0.5) 
+Using libwebsocket (0.1.7.1) 
+Using rubyzip (0.9.9) 
+Using selenium-webdriver (2.27.2) 
+Using xpath (1.0.0) 
+Using capybara (2.0.1) 
+Using coffee-script-source (1.4.0) 
+Using execjs (1.4.0) 
+Using coffee-script (2.2.0) 
+Using rack-ssl (1.3.2) 
+Using json (1.7.5) 
+Using rdoc (3.12) 
+Using thor (0.16.0) 
+Using railties (3.2.9) 
+Using coffee-rails (3.2.2) 
+Using commonjs (0.2.6) 
+Using daemons (1.1.9) 
+Using database_cleaner (0.9.1) 
+Using diff-lcs (1.1.3) 
+Using launchy (2.1.2) 
+Using email_spec (1.4.0) 
+Using eventmachine (1.0.0) 
+Using factory_girl (4.1.0) 
+Using factory_girl_rails (4.1.0) 
+Using multipart-post (1.1.5) 
+Using faraday (0.8.4) 
+Using bundler (1.2.3) 
+Using rails (3.2.9) 
+Using figaro (0.5.0) 
+Using hashie (1.2.0) 
+Using httpauth (0.2.0) 
+Using hub (1.10.3) 
+Using jquery-rails (2.1.4) 
+Using jwt (0.1.5) 
+Using less (2.2.2) 
+Using less-rails (2.2.6) 
+Using libv8 (3.11.8.4) 
+Using moped (1.3.1) 
+Using origin (1.0.11) 
+Using mongoid (3.0.15) 
+Using rspec-core (2.12.2) 
+Using rspec-expectations (2.12.1) 
+Using rspec-mocks (2.12.0) 
+Using rspec (2.12.0) 
+Using mongoid-rspec (1.5.5) 
+Using oauth2 (0.8.0) 
+Using omniauth (1.1.1) 
+Using omniauth-oauth2 (1.1.1) 
+Using omniauth-google-oauth2 (0.1.13) 
+Using quiet_assets (1.0.1) 
+Using ref (1.0.2) 
+Using rolify (3.2.0) 
+Using rspec-rails (2.12.0) 
+Using sass (3.2.3) 
+Using sass-rails (3.2.5) 
+Using simple_form (2.0.4) 
+Using therubyracer (0.11.0) 
+Using thin (1.5.0) 
+Using twitter-bootstrap-rails (2.1.9) 
+Using uglifier (1.3.0) 
+Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+cwilder@c-dubbs-pc:~/projects/MortgageLeadSystem/workspace/leadman$ 
