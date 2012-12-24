@@ -8,7 +8,5 @@ class Verifiable
   include Mongoid::Paranoia #for deleted
   
   field :verified, type: Boolean
-  field :updated, type: Time, default: ->{ Verifiable.changed? ? Time.now }
-  field :created, type: Time, default: ->{ new_record? ? Time.now }
   
 end
