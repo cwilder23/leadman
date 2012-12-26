@@ -1,9 +1,19 @@
-#
-# => Add comments
-#
+=begin
+  
+  Object representation email information.  
+  
+  This object is intended to embedded in other documents.
+  See:
+    Person
+    Company
+  
+  @author cwilder
+    
+=end
 class Email < Verifiable
-  field :email, type: String, required: true
-  field :type, type: String, default: 'main'   #todo: Add a master type lookup
+  field :email, type: String
+    validates_presence_of :email   #required
+  field :type, type: String, default: 'personal'   #todo: Add a master type lookup
   
   #One-to-one or One-to-many relationships
   #Allows several object to have addresses

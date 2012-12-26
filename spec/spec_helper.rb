@@ -12,6 +12,11 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 RSpec.configure do |config|
   config.include(EmailSpec::Helpers)
   config.include(EmailSpec::Matchers)
+  
+  # This is so we don't need to type the FactoryGirl directive everytime we want to 
+  # use a function (build, build_stubbed, create, attributes_for, and their *_list counterparts)
+  config.include FactoryGirl::Syntax::Methods
+  
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

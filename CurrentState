@@ -1,0 +1,20 @@
+#This file is to record the current state of the leadman project
+12/25/2012	- Completed model implementation for: 
+				Address
+				PhoneNumber
+				Email
+				Person
+				Verfiable			
+			- Still incomplete models:
+				Ability??
+				Company
+				Contract
+				Lead
+				Role??
+				User??
+			- Creating unit tests for: 
+				Address
+				PhoneNumber
+				Email
+				Person (1 Test)
+				Verfiable	

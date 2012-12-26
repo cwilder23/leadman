@@ -1,5 +1,10 @@
 require 'spec_helper'
 
+#Embedded document. Only the parent documents can save it.
 describe Email do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  it "should not be able to create a standalone Email document" do
+    expect {FactoryGirl.create(:personal_email)}.to raise_exception
+  end
+  
 end

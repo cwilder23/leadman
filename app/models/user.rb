@@ -8,7 +8,7 @@ class User
   field :uid, type: String
   field :name, type: String
   field :email, type: String
-  field :last_logn, type: Time, :required => true
+  field :last_logon, type: Time   #required  -  Use Mongoid validators to enforce
   attr_accessible :role_ids, :as => :admin
   attr_accessible :provider, :uid, :name, :email
   
