@@ -1,6 +1,9 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
+# To run. If you want to run on other environment, set RAILS_ENV:
+#     rake db:seed [RAILS_ENV=test]
+#
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
@@ -12,3 +15,6 @@ YAML.load(ENV['ROLES']).each do |role|
   Role.mongo_session['roles'].insert({ :name => role })
   puts 'role: ' << role
 end
+
+# Create indexes. like "rake db:mongoid:create_indexes"
+Rails::Mongoid.create_indexes("app/models/**/*.rb")

@@ -18,3 +18,13 @@
 				Email
 				Person (1 Test)
 				Verfiable	
+12/26/2012	- Completed unit tests for:
+				Person
+					Address
+					PhoneNumber
+					Email				
+					Verfiable
+			- Created indexes for Person
+				first, last, address1
+			- Added create_indexes to a person_spec unit test
+			- Added create indexes to seeds.rb
